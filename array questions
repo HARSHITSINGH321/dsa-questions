@@ -48,3 +48,34 @@ int main(){
    printarray(arr,6);
   return 0;
 }
+
+//intersection of arrays
+#include <iostream>
+using namespace std;
+ 
+int main(){
+   int arr[6]={1,2,3,4,5,6};
+   int crr[5]={2,2,3,3,5,};
+   int i=0;
+   int j=0;
+
+   while(i<6 && j<5){
+      if(arr[i]==crr[j]){
+        cout<<arr[i];
+        i++;
+        j++;
+      }
+      else if(arr[i]>crr[j]){
+        j++;
+      }
+      else if(arr[i]<crr[j]){
+        i++;
+      }
+      else{
+      return 0;}
+   }
+
+  
+  
+  return 0;
+}
