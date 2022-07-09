@@ -82,3 +82,31 @@ int main(){
    cout<<"last occurrence"<<c<<endl;
   return 0;
 }
+
+/peak element of the std::array<T, N> ;, N> ;
+#include <iostream>
+
+using namespace std;
+
+int peakelement(int arr[],int size){
+    int s=0;
+    int e=size-1;
+    int mid;
+    while(s<e){
+        mid=s+(e-s)/2;
+          if(arr[mid]<arr[mid+1]){
+              s=mid+1;
+          }
+          else{
+              e=mid;
+          }
+    }
+    return s;
+}
+int main()
+{
+    int arr[5]={2,4,5,7,1};
+     int b= peakelement(arr,5);
+     cout<<b;
+    return 0;
+}
