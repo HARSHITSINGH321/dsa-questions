@@ -17,3 +17,30 @@ int main(){
     
   return 0;
 }
+
+//reverse of a string
+
+#include <iostream>
+#include <vector>
+using namespace std;
+void reverse(char name[],int length){
+  int s=0;
+  int e=length-1;
+  while(s<e){
+    swap(name[s++],name[e--]);
+  }
+}
+
+int main(){
+   char name[20];
+   cout<<"enter your name";
+   cin>>name;
+   int length=0;
+   for(int i=0;name[i] !='\0';i++){
+    length++;
+   }
+   reverse(name ,length);
+   cout<<name<<endl;
+
+  return 0;
+}
